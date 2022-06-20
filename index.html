@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ayoub Merizak"> 
+    <meta name="description" content="game scissors paper rock">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" href="img/icon.png" sizes="32x32">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <title>Scissors Paper Rock</title>
+</head>
+<body>
+
+    <header><img src="img/logo.svg" alt="logo"><div class="score"><p>SCORE</p><span>0</span><div class="addOne">+1</div></div></header>
+
+    <!-- Game -->
+    <div class="game-container">
+        <div class="cover paper">
+            <div class="circule">
+                <img src="img/icon-paper.svg" alt="paper">
+            </div>
+        </div>
+        <div class="cover scissors">
+            <div class="circule">
+                <img src="img/icon-scissors.svg" alt="scissors">
+            </div>
+        </div>
+        <div class="cover rock">
+            <div class="circule">
+                <img src="img/icon-rock.svg" alt="rock">
+            </div>
+        </div>
+    </div>
+    <!-- Game -->
+
+    <!-- Chose -->
+    <div class="chose-container">
+        <div class="first-chose">
+            <div class="chose">
+            </div>
+            <span>You Picked</span>
+        </div>
+        <div class="second-chose">
+            <div class="chose">
+                <div class="wait">Wait...</div>
+            </div>
+            <span>The House Picked</span>
+        </div>
+        <div class="result">
+            <p></p>
+            <button class="play-again">play again</button>
+        </div>
+    </div>
+    <!-- Chose -->
+
+    <button class="rules">Rules</button>
+
+    <div class="bg"></div>
+
+    <!-- Rules -->
+    <div class="rules-container">
+        <h1>Rules</h1>
+        <img src="img/image-rules.svg" alt="rules">
+        <img class="close" src="img/icon-close.svg" alt="close">
+    </div>
+    <!-- Rules -->
+
+    <!-- Sound -->
+    <audio class="win" src="audio/win.wav" preload="auto" hidden></audio>
+    <audio src="audio/lose.wav" class="lose" preload="auto" hidden></audio>
+    <audio src="audio/draw.wav" class="draw" preload="auto" hidden></audio>
+    <!-- Sound -->
+
+
+
+    <!-- Script -->
+    <script src="main.js"></script>
+
+</body>
+</html>

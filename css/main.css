@@ -1,0 +1,387 @@
+.rules {
+  margin-top: auto;
+  background: transparent;
+  padding: 0.8rem 2.4rem;
+  color: #fff;
+  font-weight: 700;
+  border: 1px solid #8f8f8f;
+  border-radius: 5px;
+}
+
+.rules:hover {
+  background-color: #fff;
+  color: #3b4363;
+}
+
+.play-again {
+  padding: 1rem 4.4rem;
+  border-radius: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #2a46c0;
+}
+
+.play-again:hover {
+  color: #dc2e4e;
+}
+
+@-webkit-keyframes flowUp {
+  to {
+    opacity: 0;
+    -webkit-transform: translateY(-55px);
+            transform: translateY(-55px);
+  }
+}
+
+@keyframes flowUp {
+  to {
+    opacity: 0;
+    -webkit-transform: translateY(-55px);
+            transform: translateY(-55px);
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+  min-height: 100vh;
+  max-height: 100vh;
+  background: -webkit-gradient(linear, left top, left bottom, from(#1f3756), to(#141539));
+  background: linear-gradient(#1f3756, #141539);
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  -webkit-box-pack: start !important;
+      -ms-flex-pack: start !important;
+          justify-content: start !important;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-block: 3rem 6rem;
+}
+
+button {
+  border: none;
+  outline: none;
+  -webkit-transition: .5s;
+  transition: .5s;
+  cursor: pointer;
+}
+
+.center-f, body, header, header .score, .chose-container, .rules-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.center-g, .cover, .cover .circule, .chose-container .chose {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.position-flow, .bg, .rules-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+header {
+  border: 3px solid #8f8f8f;
+  border-radius: 5px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-inline: auto;
+  width: 85%;
+  padding: 0.6rem 0.8rem;
+}
+
+header > img {
+  height: 75px;
+}
+
+header .score {
+  background-color: #fff;
+  height: 85px;
+  width: 85px;
+  border-radius: 5px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+}
+
+header .score p {
+  font-size: .8em;
+  color: #2a46c0;
+  font-weight: 600;
+}
+
+header .score span {
+  font-size: 3em;
+  font-weight: 700;
+  line-height: 40px;
+  color: #3b4363;
+}
+
+header .score .addOne {
+  position: absolute;
+  bottom: 10px;
+  font-size: 2em;
+  color: #2a46c0;
+  font-weight: 700;
+  opacity: 0;
+  -webkit-animation: flowUp 1.5s 1 linear forwards;
+          animation: flowUp 1.5s 1 linear forwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+.game-container {
+  height: 250px;
+  width: 250px;
+  background: url(../../../img/bg-triangle.svg) center no-repeat;
+  background-size: contain;
+  margin-top: 200px;
+  margin-top: 10rem;
+  position: relative;
+}
+
+.cover {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  position: absolute;
+  cursor: pointer;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.cover:hover {
+  -webkit-filter: brightness(0.8);
+          filter: brightness(0.8);
+}
+
+.cover .circule {
+  height: 80%;
+  width: 80%;
+  background-color: #fff;
+  border-radius: 50%;
+  -webkit-box-shadow: inset 0 6px 0 #dfdfdf;
+          box-shadow: inset 0 6px 0 #dfdfdf;
+}
+
+.paper {
+  background: -webkit-gradient(linear, left top, left bottom, from(#4865f4), to(#5671f5));
+  background: linear-gradient(#4865f4, #5671f5);
+  top: -25%;
+  left: -15%;
+  -webkit-box-shadow: 0 5px 0 #0b29c1;
+          box-shadow: 0 5px 0 #0b29c1;
+}
+
+.scissors {
+  background: -webkit-gradient(linear, left top, left bottom, from(#ec9e0e), to(#eca922));
+  background: linear-gradient(#ec9e0e, #eca922);
+  top: -25%;
+  left: 60%;
+  -webkit-box-shadow: 0 5px 0 #a9710a;
+          box-shadow: 0 5px 0 #a9710a;
+}
+
+.rock {
+  background: -webkit-gradient(linear, left top, left bottom, from(#dc2e4e), to(#dd405d));
+  background: linear-gradient(#dc2e4e, #dd405d);
+  bottom: -10%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-box-shadow: 0 5px 0 #ae1e38;
+          box-shadow: 0 5px 0 #ae1e38;
+}
+
+.chose-container {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-inline: 2rem;
+  width: 95%;
+  text-align: center;
+  margin-top: 8rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  display: none;
+}
+
+.chose-container .chose {
+  height: 120px;
+  width: 120px;
+  background-color: #1a223e;
+  border-radius: 50%;
+  margin-bottom: 1.4rem;
+  position: relative;
+}
+
+.chose-container .chose .wait {
+  position: absolute;
+  font-size: 1.4rem;
+  color: #fff;
+}
+
+.chose-container .chose .rock, .chose-container .chose .scissors, .chose-container .chose .paper {
+  top: unset;
+  left: unset;
+  bottom: unset;
+  right: unset;
+  -webkit-transform: unset;
+          transform: unset;
+}
+
+.chose-container .winner {
+  -webkit-box-shadow: 0 0 0 40px #ffffff14, 0 0 0 60px #ffffff14, 0 0 0 80px #ffffff14, 0 0 0 100px #ffffff14;
+          box-shadow: 0 0 0 40px #ffffff14, 0 0 0 60px #ffffff14, 0 0 0 80px #ffffff14, 0 0 0 100px #ffffff14;
+}
+
+.chose-container span {
+  color: #dfdfdf;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.chose-container .result {
+  width: 100%;
+  margin-top: 3rem;
+  display: none;
+}
+
+.chose-container .result p {
+  font-size: 4rem;
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: .6rem;
+}
+
+.bg {
+  width: 100%;
+  height: 100%;
+  background-color: #00000061;
+  z-index: 5;
+  display: none;
+}
+
+.rules-container {
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-block: 4rem;
+  z-index: 9;
+  display: none;
+}
+
+.rules-container img:first-of-type {
+  width: 300px;
+}
+
+.rules-container img:last-of-type {
+  width: 25px;
+  cursor: pointer;
+}
+
+.rules-container h1 {
+  color: #3b4363;
+}
+
+@media (min-width: 992px) {
+  body {
+    padding: 3rem 2rem;
+  }
+  header {
+    width: 60%;
+    padding: 1rem 1.2rem;
+  }
+  header .score {
+    height: 100px;
+    width: 115px;
+    border-radius: 10px;
+  }
+  header .score p {
+    font-size: 1em;
+    color: #2a46c0;
+    font-weight: 600;
+  }
+  header .score span {
+    font-size: 4em;
+    line-height: 55px;
+  }
+  .game-container {
+    height: 330px;
+    width: 330px;
+  }
+  .cover {
+    height: 200px;
+    width: 200px;
+  }
+  .chose-container {
+    width: 990px;
+  }
+  .chose-container .second-chose {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .chose-container .result {
+    width: unset;
+  }
+  .chose-container .chose {
+    margin-bottom: 4rem;
+  }
+  .rules {
+    margin: auto 3rem 0 auto;
+  }
+  .rules-container {
+    height: 400px;
+    width: 400px;
+    border-radius: 1rem;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    padding: 2rem;
+  }
+  .rules-container h1 {
+    -ms-flex-item-align: start;
+        -ms-grid-row-align: start;
+        align-self: start;
+  }
+  .rules-container img:first-of-type {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .rules-container img:last-of-type {
+    position: absolute;
+    right: 25px;
+    top: 35px;
+  }
+}
+/*# sourceMappingURL=main.css.map */

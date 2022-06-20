@@ -1,0 +1,24 @@
+.rules {
+    margin-top: auto;
+    background: transparent;
+    padding: 0.8rem 2.4rem;
+    color: #fff;
+    font-weight: 700;
+    border: 1px solid $darkGray;
+    border-radius: 5px;
+    &:hover {
+        background-color: $white;
+        color: $ScoreCount;
+    }
+}
+
+.play-again {
+    padding: 1rem 4.4rem;
+    border-radius: 0.6rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: $ScoreText;
+    &:hover {
+        color: $lightRed;
+    }
+}

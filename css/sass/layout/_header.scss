@@ -1,0 +1,42 @@
+header {
+    border: 3px solid $darkGray;
+    border-radius: 5px;
+    @extend .center-f;
+    justify-content: space-between;
+    margin-inline: auto;
+    width: 85%;
+    padding: 0.6rem 0.8rem;
+    > img {
+        height: 75px;
+    }
+    .score {
+        background-color: #fff;
+        height: 85px;
+        width: 85px;
+        border-radius: 5px;
+        @extend .center-f;
+        flex-direction: column;
+        position: relative;
+        p {
+            font-size: .8em;
+            color: $ScoreText;
+            font-weight: 600;
+        }
+        span {
+            font-size: 3em;
+            font-weight: 700;
+            line-height: 40px;
+            color: $ScoreCount;
+        }
+        .addOne {
+            position: absolute;
+            bottom: 10px;
+            font-size: 2em;
+            color: $ScoreText;
+            font-weight: 700;
+            opacity: 0;
+            animation: flowUp 1.5s 1 linear forwards;
+            animation-play-state: paused;
+        }
+    }
+}
